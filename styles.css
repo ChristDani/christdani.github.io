@@ -746,7 +746,11 @@ h1 em {
 .footer-actions {
   display: flex;
   gap: 25px;
-  align-items: flex-start;
+  align-items: center;
+}
+.footer-actions > * {
+  display: inline-flex;
+  align-items: center;
 }
 .text-button {
   border: 0;
@@ -755,6 +759,9 @@ h1 em {
   background: transparent;
   cursor: pointer;
   font-size: 0.8rem;
+  line-height: 1.2;
+  min-height: 32px;
+  width: auto;
 }
 .cv-menu-footer {
   top: auto;
@@ -934,7 +941,22 @@ h1 em {
     grid-template-columns: 1fr;
   }
   .footer-actions {
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    width: 100%;
+    align-items: center;
+  }
+  .footer-actions > * {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    min-height: 32px;
+  }
+  .text-button {
+    width: 100%;
+    justify-content: center;
   }
   .site-footer small {
     grid-column: auto;
