@@ -853,18 +853,28 @@ h1 em {
     bottom: 30px;
   }
   .hero-actions {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 12px;
+    width: 100%;
+    align-items: stretch;
   }
   .hero-actions .button,
   .hero-actions .cv-download,
   .cv-trigger,
   .cv-dialog-trigger {
-    width: auto;
+    width: 100%;
     max-width: none;
     justify-content: center;
+    min-height: 52px;
+  }
+  .cv-download {
+    display: flex;
+    align-items: stretch;
+  }
+  .cv-trigger {
+    display: inline-flex;
+    align-items: center;
   }
   .metrics {
     grid-template-columns: repeat(2, 1fr);
