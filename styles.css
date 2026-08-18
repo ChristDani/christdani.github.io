@@ -746,21 +746,23 @@ h1 em {
 .footer-actions {
   display: flex;
   gap: 25px;
-  align-items: center;
+  align-items: flex-end;
 }
 .footer-actions > * {
   display: inline-flex;
-  align-items: center;
+  align-items: flex-end;
 }
 .text-button {
+  display: inline-flex;
+  align-items: center;
   border: 0;
   border-bottom: 1px solid var(--accent);
-  padding: 0 0 3px;
+  padding: 0 0 4px;
   background: transparent;
   cursor: pointer;
   font-size: 0.8rem;
   line-height: 1.2;
-  min-height: 32px;
+  min-height: 0;
   width: auto;
 }
 .cv-menu-footer {
@@ -949,6 +951,7 @@ h1 em {
   }
   .site-footer {
     grid-template-columns: 1fr;
+    row-gap: 12px;
   }
   .footer-actions {
     display: grid;
@@ -963,10 +966,21 @@ h1 em {
     display: flex;
     align-items: center;
     min-height: 32px;
+    height: 32px;
   }
-  .text-button {
-    width: 100%;
+  .footer-actions .cv-download {
+    display: flex;
+    align-items: center;
+  }
+  .site-footer .cv-trigger,
+  .site-footer .text-button {
+    display: inline-flex;
+    align-items: center;
     justify-content: center;
+    min-height: 32px;
+    height: 32px;
+    padding-bottom: 4px;
+    line-height: 1.2;
   }
   .site-footer small {
     grid-column: auto;
